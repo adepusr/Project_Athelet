@@ -9,9 +9,9 @@ var MainChoose = React.createClass({
         },
     render(){
         return(
-            <div>
-                <button ><a href="/PlayersList">LIST</a></button>
-                <button ><a href="/Register">REGISTER</a></button>
+            <div class="addprjbtn">
+                <button class="btn btn-info addprj"><a href="/PlayersList">LIST</a></button>
+                <button class="btn btn-info addprj"><a href="/Register">REGISTER</a></button>
             </div>
         )
 

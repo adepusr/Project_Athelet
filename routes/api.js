@@ -21,6 +21,18 @@ router.get('/usersList', function(req, res, next) {
         }
     })
 });
+router.post('/usersList', function(req, res, next) {
+  let data= req.body.user;
+  var  collection = db.get().collection('users');
+    collection.insertOne(data, function(err) {
+        if (err) {                        
+            res.status(500);
+            res.send("Bad format: of data");
+        } else {      
+            res.send("ok");
+        }
+    })
+});
 
 router.get('/Playerslist', function(req, res, next) {
   res.render('playersList');

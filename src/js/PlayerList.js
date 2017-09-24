@@ -35,7 +35,7 @@ var PlayerList = React.createClass({
 			return(
 				<div class="list-group">
 				{ users.map(function(user) {
-						return( <PlayerOne user= {user} key={user._id} />)
+						return( <PlayerOne user= {JSON.stringify(user)} key={user._id} />)
 					})
 				}
 				</div>
