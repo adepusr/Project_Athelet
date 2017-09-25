@@ -16,10 +16,14 @@ b) /Register  -- (Registration)<br/>
 c) /PlayersList  -- (List of previous registered users)<br/><br/>
 <br/><br/>
 
+## Steps after downloading Sourse Code <br/>
+npm install <br/>
+npm install -g nodemon <br/>
+nodemon  <br/>
+npm run dev <br/>
+
 # API
 ## GET: http://ec2-18-220-71-110.us-east-2.compute.amazonaws.com/usersList <br/>
-
-
 ## POST: http://ec2-18-220-71-110.us-east-2.compute.amazonaws.com/usersList <br/>
 
 (takes imput as JSON body having 
