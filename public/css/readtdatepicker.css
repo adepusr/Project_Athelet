@@ -661,17 +661,13 @@ td.react-bs-table-expand-cell {
    padding:  5%;
    margin-bottom: 7%;
    margin-top: 3%;
-   background-color: aliceblue;
+   background-color: #D4DCE2;
  }
- .triangle-with-shadow {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: -65px;
-  left: -55px;
-  z-index: 5;
-  overflow: hidden;
-  transform: rotate(-45deg);
+ .list-group-item:hover{
+  padding:  5%;
+  margin-bottom: 7%;
+  margin-top: 3%;
+  background-color: #D7DDE0;
 }
 .prjsetting {
   position: absolute;
@@ -682,7 +678,15 @@ td.react-bs-table-expand-cell {
   font-size: 30px;
   cursor: pointer;
 }
-
+.prjsetting:hover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  z-index: 20;
+  font-size: 40px;
+  cursor: pointer;
+}
 
 #choose{  
   margin-left: 15%;
@@ -698,6 +702,14 @@ td.react-bs-table-expand-cell {
   background-color: #000000;
   border-color: #000000;
   border-radius: 25px;
+}
+.addprj2{
+  font-weight: 300;
+  outline: none;
+  padding: 12px 30px 12px 30px;
+  color: #FFFFFF;
+  background-color: #72F4FD;
+  border-radius: 15px;
 }
 button{
   margin: 10px;
@@ -720,3 +732,38 @@ input{
   margin-bottom: 10px;
   margin-top: 5px;
 }
+.Profileimage{
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+#menu-outer {
+	height: 84px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+ul#horizontal-list li {
+  display: inline;
+  padding: 10px;
+  background-color: aliceblue;
+  margin: 5px;
+}
+.radiooptions{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.gendericon{
+  margin-right: 8%;
+}
+.fa-male{
+  color: #4C87F5
+}
+.fa-female{
+  color: #FFC0DA
+}
+
+  

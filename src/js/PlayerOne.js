@@ -24,7 +24,9 @@ var PlayerOne = React.createClass({
 			return(
                 
                 <div class="list-group-item">
-                    <i class="fa fa-cog prjsetting" aria-hidden="true" data-toggle="modal" data-target="#Robot"></i>
+                    <div>
+                       <img src={this.state.userDetails.ProfileImage} class="Profileimage"/>
+                    </div>
                    <div>
                        <h3>Name: {this.state.userDetails.Name}</h3>
                     </div>
@@ -38,45 +40,67 @@ var PlayerOne = React.createClass({
                        <h3>Date Of Birth: {this.state.userDetails.DOB}</h3>
                     </div>
                     <div>
-                       <h3>Marrage Status: {this.state.userDetails.Married}</h3>
+                       <h3>Team: <i>{this.state.userDetails.Team}</i></h3>
                     </div>
                     <div>
-                       <h3>{this.state.userDetails.Pets}</h3>
+                       <h3>About: {this.state.userDetails.About}</h3>
                     </div>
                     <div>
-                      <h3>{this.state.userDetails.ProfileImage}</h3>
+                       <h3>Association: {this.state.userDetails.Association}</h3>
                     </div>
                     <div>
-                       <h3>{this.state.userDetails.Team}</h3>
+                       <h3>Charity: {this.state.userDetails.Charity}</h3>
                     </div>
-                    <div>
-                       <h3>{this.state.userDetails.Drinks}</h3>
+                    <div id="menu-outer">
+                        <div class="table">
+                            <h3>Sports: </h3>
+                            <ul id="horizontal-list">
+                            {this.state.userDetails.Sports.map(function(sport){
+                            return(
+                                <li>{sport}</li>
+                            )
+                            })}
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                       <h3>{this.state.userDetails.About}</h3>
-                    </div>
-                    <div>
-                       <h3>{this.state.userDetails.Association}</h3>
-                    </div>
-                    <div>
-                       <h3>{this.state.userDetails.Charity}</h3>
-                    </div>
-                    <div>
-                        <ul>
-                        {this.state.userDetails.Sports.map(function(sport){
-                        return(
-                              <li>sport</li>
-                        )
-                        })}
-                        </ul>
-                    </div>
-                    {/* <div>
-                       <h3>{this.state.userDetails.SocialMediaHandles.Facebook}</h3>
-                       <h3>{this.state.userDetails.SocialMediaHandles.Twitter}</h3>
-                       <h3>{this.state.userDetails.SocialMediaHandles.Instagram}</h3>
-                    </div> */}
+                    {this.socialHandlers1()}
+                    {this.socialHandlers2()}
+                    {this.socialHandlers3()}
                 </div>
 			)
-	}	
+    },
+    socialHandlers1: function(){
+        if(this.state.userDetails.SocialMediaHandles.facebook !="")
+        return(
+            <button class="btn btn-info" ><a href={this.state.userDetails.SocialMediaHandles.facebook}>Facebook</a></button>
+        )
+        else{
+            return(
+                <button class="btn btn-info disabled" ><a>Facebook</a></button>
+            )
+        }
+    },	
+    socialHandlers2: function(){
+        if(this.state.userDetails.SocialMediaHandles.linkedin !="")
+        return(
+            <button class="btn btn-info" ><a href={this.state.userDetails.SocialMediaHandles.linkedin}>Linkedin</a></button>
+        )
+        else{
+            return(
+                <button class="btn btn-info disabled" ><a>linkedin</a></button>
+            )
+        }
+    },
+    socialHandlers3: function(){
+        if(this.state.userDetails.SocialMediaHandles.instagram !="")
+        return(
+            <button class="btn btn-info" ><a href={this.state.userDetails.SocialMediaHandles.instagram}>Linkedin</a></button>
+        )
+        else{
+            return(
+                <button class="btn btn-info disabled" ><a>Instagram</a></button>
+            )
+        }
+    }		
 });
 module.exports = PlayerOne;

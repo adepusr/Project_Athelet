@@ -18,6 +18,7 @@ var Summary = React.createClass({
                }, function(result) {
                    if(result == "ok"){
                        console.log("ok");
+                       window.location.href = "/Playerslist"
                    }
               })
             }, 0)
@@ -28,6 +29,7 @@ var Summary = React.createClass({
         return(
             <div>
                 <PlayerOne user= {JSON.stringify(this.state.finalDetails)}/>
+                <input type="button" class="btn btn-info addprj" value="BACK" onClick={this.props.previousPage}/>
                 <input type="button" class="btn btn-info addprj" value="SUBMIT" onClick={this.submitDetails}/>
             </div>
         )
