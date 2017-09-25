@@ -49,11 +49,11 @@ var PlayerOne = React.createClass({
                        <h3>Association: {this.state.userDetails.Association}</h3>
                     </div>
                     <div>
-                       <h3>Charity: {this.state.userDetails.Charity}</h3>
+                       <h3>Charity: {this.state.userDetails.Charities}</h3>
                     </div>
                     <div id="menu-outer">
                         <div class="table">
-                            <h3>Sports: </h3>
+                            <h3>Sports: </h3><br/>
                             <ul id="horizontal-list">
                             {this.state.userDetails.Sports.map(function(sport){
                             return(
@@ -61,8 +61,8 @@ var PlayerOne = React.createClass({
                             )
                             })}
                             </ul>
-                        </div>
-                    </div>
+                        </div><br/>
+                    </div><h3>Connect me through: </h3>
                     {this.socialHandlers1()}
                     {this.socialHandlers2()}
                     {this.socialHandlers3()}

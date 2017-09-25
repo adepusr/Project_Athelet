@@ -67,4 +67,4 @@ app.use('/', routes);
 
 app.listen(3000);
 
-console.log('todo list RESTful API server started on: 3000');
+console.log('RESTful API server started on: 3000');
