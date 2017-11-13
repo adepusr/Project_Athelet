@@ -51,3 +51,27 @@ Sample Structure
     },
     "ProfileImage": "data:image/jpeg;base64,/9j/Fs4usSYpbtpfnu+URzL"
 })
+
+
+# TASK: <br/>
+I would like you to create a multi-step or multi-screen athlete profile form that gathers standard demographic, sports and event data. Here is a list of data points and sports you might want to use:
+### Data Points:
+Name, Date of Birth, Nationality, Location, Association (e.g. NBA, NFL), Team (e.g. New York Giants), Gender, Sports (Can Multiple), About, Interests, Charities, Social Media Handles (Facebook, Twitter, Instagram, Youtube, Twitch, Snapchat), Pets, Drinks Alcohol, Married, Profile Image (S3 storage)
+### Sports
+Golf, Tennis, Cricket, Basketball, Baseball, American Football, Aquatics, Archery, Automobile Racing, Badminton, Beach Volleyball, Bobsleigh, Body Building, Boxing, Cross Country Running, Cross Country Skiing, Curling
+
+Here is a suggested organization of the form but use your best judgement and creativity:
+-> Basic Info: name, sport, nationality, gender, date of birth
+-> About: description, location, team etc
+-> Social Media: handles
+-> Summary: show the athlete a wrap-up screen with the info they added, and give them a way to go back and edit if there are any mistake
+-> Submit: On submit, the payload should be sent to a simple end point which persists the profile. This should be saved to a simple free MongoDB instance, such as mLab.
+
+### List: 
+After submission I should see a list of all profiles I have created in a simple table view (BONUS FEATURE)
+API : Node/Express
+Mongoose ORM (MongoDB)
+3 End Points - POST, GET, PUT
+Request Param Validation - express-validator (Bonus Feature)
+
+## This is a single-page application. There willn't be page reloads between screens.
